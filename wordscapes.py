@@ -4,7 +4,7 @@ import sys
 if __name__ == '__main__':
     arguments = sys.argv[1:4]
     # arguments are letters, length, required letters
-    if len(arguments) <= 1:
+    if len(arguments) <= 0:
         print("Usage: python wordscapes.py <letters> [length] [required letters]\nWhere letters is a string of letters, \nlength is the length(integer) of the word, \nand required letters is a string of letters that must be in the word at the specified index. '*' and '.' are wildcards for required letters.")
         sys.exit(1)
     letters = arguments[0]
