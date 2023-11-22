@@ -38,12 +38,14 @@ if __name__ == '__main__':
         print("".join(words))
         sys.exit(0)
 
+    words_to_remove = []
     for word in words:
         for index, char in enumerate(word.strip()):
-            if char not in required[index] and not ( required[index] == '*' or required[index] == '.' ):
-                words.remove(word)
+            if word[index] != required[index] and not ( required[index] == '*' or required[index] == '.' ):
+                words_to_remove.append(word)
                 break
-
+    for word in words_to_remove:
+        words.remove(word)
             
     print("".join(words))
             
